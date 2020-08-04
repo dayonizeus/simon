@@ -1,0 +1,118 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.main {
+	width: 500px;
+	margin: 0 auto;
+	font-family: Arial;
+}
+
+h1 {
+	text-align: center;
+	margin-top: 20px;
+}
+
+#app {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20px;
+}
+
+button {
+	border: none;
+}
+ 
+button:focus {
+    outline: none;
+}
+
+button:active {
+	border: none;
+	opacity: 0.2;
+	outline: none;
+}
+
+.app__field {
+	position: relative;
+	width: 300px;
+	height: 300px;
+}
+
+#first, #second, #third, #fourth {
+	width: 150px;
+	height: 150px;
+	position: absolute;
+	
+}
+
+#first {
+	border-top-left-radius: 100%;
+	top: 0;
+	left: 0;
+	background: blue;
+}
+
+#second {
+	border-top-right-radius: 100%;
+	top: 0;
+	right: 0;
+	background: red;
+}
+
+#third {
+	border-bottom-left-radius: 100%;
+	bottom: 0;
+	left: 0;
+	background: yellow;
+}
+
+#fourth {
+	border-bottom-right-radius: 100%;
+	bottom: 0;
+	right: 0;
+	background: green;
+}
+
+.selected {
+  opacity: 0.2;
+}
+
+.app__state {
+	font-size: 22px;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.app__round {
+	margin-top: 30px;
+}
+
+.app__start {
+	width: 120px;
+	height: 40px;
+	border-radius: 10px;
+	background-color: blue;
+	color: white;
+	font-size: 18px;
+	margin-top: 20px;
+}
+
+.app__options {
+	margin-top: 20px;
+}
+
+.app__label {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.app__radio-option {
+	margin-top: 10px;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="main">
+        <h1>Simon Says</h1>
+        <div id="app">
+            <div class="app__left-side">
+                <div class="app__field">
+                    <button id="first" :class="button1" :disabled="isUserChoiceDisabled" @click="userInput(1)"></button>
+                    <button id="second" :class="button2" :disabled="isUserChoiceDisabled" @click="userInput(2)"></button>
+                    <button id="third" :class="button3" :disabled="isUserChoiceDisabled" @click="userInput(3)"></button>
+                    <button id="fourth" :class="button4" :disabled="isUserChoiceDisabled" @click="userInput(4)"></button>
+                </div>
+                <p class="app__state">{{appState}}</p>
+            </div>
+            <div class="app__panel">
+                <h2 class="app__round">Раунд: {{round}}</h2>
+                <button class="app__start" @click="startGame" :disabled="isStartDisabled">Старт</button>
+                <form class="app__options">
+                    <p class="app__label">Уровень сложности</p>
+                    <div class="app__radio-option" title="1500мс">
+                        <input type="radio" value="easy" id="easy" name="difficult" :disabled="isStartDisabled" v-model="difficulty">
+                        <label for="easy">Легкий</label>
+                    </div>
+                    <div class="app__radio-option" title="1000мс">
+                        <input type="radio" value="normal" id="normal" name="difficult" :disabled="isStartDisabled" v-model="difficulty">
+                        <label for="normal">Нормальный</label>
+                    </div>
+                    <div class="app__radio-option" title="400мс">
+                        <input type="radio" value="hard" id="hard" name="difficult" :disabled="isStartDisabled" v-model="difficulty">
+                        <label for="hard">Сложный</label>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
